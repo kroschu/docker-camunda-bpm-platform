@@ -1,4 +1,4 @@
-FROM  openjdk as builder
+FROM  openjdk:12-jdk-alpine as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM openjdk
+FROM openjdk:12-jdk-alpine
 
 ARG VERSION=7.9.0
 
