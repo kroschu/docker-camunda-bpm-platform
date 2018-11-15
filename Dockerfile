@@ -1,4 +1,4 @@
-FROM maxleiko/armhf-alpine-java as builder
+FROM resin/raspberry-pi-alpine-openjdk:openjdk-8-jre-20181021 as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM maxleiko/armhf-alpine-java
+FROM resin/raspberry-pi-alpine-openjdk:openjdk-8-jre-20181021
 
 ARG VERSION=7.9.0
 
