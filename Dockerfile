@@ -1,4 +1,4 @@
-FROM resin/raspberry-pi-alpine-openjdk:openjdk-8-jre-20181021 as builder
+FROM  reverie/armhf-alpine-oracle-jdk as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM resin/raspberry-pi-alpine-openjdk:openjdk-8-jre-20181021
+FROM reverie/armhf-alpine-oracle-jdk
 
 ARG VERSION=7.9.0
 
