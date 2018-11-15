@@ -1,4 +1,4 @@
-FROM  rlogiacco/rpi-tomcat as builder
+FROM  openjdk as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM rlogiacco/rpi-tomcat
+FROM openjdk
 
 ARG VERSION=7.9.0
 
