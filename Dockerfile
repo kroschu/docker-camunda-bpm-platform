@@ -1,4 +1,4 @@
-FROM  openjdk:12-jdk-alpine as builder
+FROM  dpsmyth/raspberrypi3-alpine-java as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM openjdk:12-jdk-alpine
+FROM dpsmyth/raspberrypi3-alpine-java
 
 ARG VERSION=7.9.0
 
