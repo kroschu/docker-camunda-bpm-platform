@@ -1,4 +1,4 @@
-FROM  reverie/armhf-alpine-oracle-jdk as builder
+FROM  rlogiacco/rpi-tomcat as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM reverie/armhf-alpine-oracle-jdk
+FROM rlogiacco/rpi-tomcat
 
 ARG VERSION=7.9.0
 
