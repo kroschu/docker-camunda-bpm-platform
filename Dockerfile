@@ -1,4 +1,4 @@
-FROM  maxleiko/armhf-alpine-java as builder
+FROM  armhf/openjdk:8-jre-alpine as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM maxleiko/armhf-alpine-java
+FROM armhf/openjdk:8-jre-alpine
 
 ARG VERSION=7.9.0
 
