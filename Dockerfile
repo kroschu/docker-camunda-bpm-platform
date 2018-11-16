@@ -1,4 +1,4 @@
-FROM  resin/raspberry-pi-alpine-buildpack-deps as builder
+FROM  resin/raspberry-pi-alpine-openjdk:openjdk-8-jre as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM resin/raspberry-pi-alpine-buildpack-deps
+FROM resin/raspberry-pi-alpine-openjdk:openjdk-8-jre
 
 ARG VERSION=7.9.0
 
