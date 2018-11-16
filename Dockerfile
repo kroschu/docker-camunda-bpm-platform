@@ -1,4 +1,4 @@
-FROM  dpsmyth/raspberrypi3-alpine-java as builder
+FROM  resin/raspberry-pi-alpine-buildpack-deps as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM dpsmyth/raspberrypi3-alpine-java
+FROM resin/raspberry-pi-alpine-buildpack-deps
 
 ARG VERSION=7.9.0
 
