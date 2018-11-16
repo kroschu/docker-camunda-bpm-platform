@@ -1,4 +1,4 @@
-FROM  armhf/openjdk:8-jre-alpine as builder
+FROM  kroschu/openjdk8-alpine-armhf:latest as builder
 
 ARG VERSION=7.9.0
 ARG DISTRO=tomcat
@@ -21,7 +21,7 @@ RUN /tmp/download.sh
 
 ##### FINAL IMAGE #####
 
-FROM armhf/openjdk:8-jre-alpine
+FROM kroschu/openjdk8-alpine-armhf:latest
 
 ARG VERSION=7.9.0
 
